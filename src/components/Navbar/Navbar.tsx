@@ -28,7 +28,7 @@ const Navbar = () => {
                   <Image
                     src={'/line.png'}
                     alt="Separator"
-                    width={80}
+                    width={70}
                     height={7}
                     className={styles.separator}
                   />

@@ -5,7 +5,8 @@
   display: flex;
   justify-content: space-between;
   background-color: #d8d0bb;
-  border: 1px solid black;
+  border: 3px solid black;
+  z-index: 9999;
 }
 
 .container {
@@ -23,7 +24,7 @@
   transition: transform 0.2s ease;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
   }
 }
 
@@ -42,7 +43,7 @@
 .separator {
   top: 50%;
   transform: translateY(-50%);
-  padding: 0 12px;
+  padding: 0 8px;
 }
 
 .link {
