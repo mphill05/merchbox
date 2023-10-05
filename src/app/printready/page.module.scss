@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.topHeader {
+  padding: 100px 0;
+  font-size: 35px;
+  font-weight: bold;
+}
