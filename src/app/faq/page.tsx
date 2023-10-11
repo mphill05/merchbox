@@ -10,7 +10,7 @@ const FaqPage = () => {
         <h3>OUR MOST FREQUENTLY ASKED QUESTIONS</h3>
       </div>
       {faqData.map((data, index) => (
-        <div key={index}>
+        <div key={index} className={styles.accordian}>
           <Accordian title={data.title} content={data.content} />
         </div>
       ))}
