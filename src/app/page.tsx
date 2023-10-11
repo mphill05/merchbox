@@ -1,6 +1,7 @@
 import { clientImages } from '@/constants';
 import Image from 'next/image';
 import styles from './page.module.scss';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -12,13 +13,15 @@ export default function Home() {
             BRANDS.
           </p>
           <button className={styles.tapeBtn}>
-            <Image
-              src={'/tape.png'}
-              alt="Meet Our Team Button"
-              height={100}
-              width={400}
-            />
-            <p className={styles.teamBtn}>Meet Our Team</p>
+            <Link href={'/ourteam'}>
+              <Image
+                src={'/tape.png'}
+                alt="Meet Our Team Button"
+                height={100}
+                width={400}
+              />
+              <p className={styles.teamBtn}>Meet Our Team</p>
+            </Link>
           </button>
         </div>
         <div className={styles.teamRight}>

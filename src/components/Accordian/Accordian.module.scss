@@ -1,0 +1,17 @@
+.accordian {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: #f1f1f1;
+}
+
+.content {
+  padding: 1rem;
+}
