@@ -1,5 +1,5 @@
 .accordian {
-  border: 1px solid #ccc;
+  border-bottom: 7px solid #000;
   border-radius: 4px;
   margin-bottom: 1rem;
 }
@@ -9,9 +9,22 @@
   justify-content: space-between;
   padding: 1rem;
   cursor: pointer;
-  background-color: #f1f1f1;
+  font-weight: bolder;
+  font-size: 1.2em;
+
+  span {
+    width: 90%;
+  }
+
+  button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+  }
 }
 
 .content {
   padding: 1rem;
+  font-weight: bold;
+  font-size: 1.2em;
 }
