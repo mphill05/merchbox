@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  padding: 3rem;
   min-height: 100vh;
 }
 
@@ -92,4 +92,66 @@
   text-align: center;
   font-size: 65px;
   padding: 80px 0;
+}
+
+.sectionOne,
+.sectionTwo,
+.sectionThree {
+  height: 80vh;
+  width: 100vw;
+}
+
+.pricing,
+.preProd,
+.delivery {
+  width: 30vw;
+  margin-left: 10vw;
+
+  h3 {
+    font-weight: bold;
+    font-size: 48px;
+  }
+
+  p {
+    font-size: 34px;
+  }
+}
+
+.printReady,
+.prod,
+.happyClients {
+  width: 30vw;
+  float: right;
+  margin-right: 10vw;
+
+  h3 {
+    font-weight: bold;
+    font-size: 48px;
+  }
+
+  p {
+    font-size: 34px;
+  }
+}
+
+.checkout {
+  display: block;
+  font-weight: bolder;
+  font-size: 48px;
+  width: 50%;
+  margin: auto;
+}
+
+.socials {
+  display: block;
+  font-weight: bolder;
+  font-size: 48px;
+  width: 50%;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.socials a:first-child {
+  margin-right: 30px;
 }
