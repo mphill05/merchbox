@@ -3,8 +3,28 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem;
+  // padding: 2rem;
   min-height: 100vh;
+
+  p {
+    font-family: 'Diogenes', sans-serif;
+  }
+}
+
+.topText {
+  font-size: 54px;
+  font-weight: normal;
+  width: 90%;
+  margin-top: -100px;
+  margin-left: 70px;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  min-height: 0vw;
+  align-self: start;
+  justify-self: start;
+  margin-left: 8%;
+  margin-top: 5%;
+  position: relative;
 }
 
 .teamSection {
@@ -13,22 +33,38 @@
   width: 100%;
 }
 
+.teamBtnContainer {
+  width: 50%;
+  margin-top: 50px;
+}
+
 .tapeBtn {
   border: none;
   background: transparent;
   position: relative;
-  height: 100px;
-  width: 400px;
   cursor: pointer;
+  object-fit: contain;
+  object-position: center center;
+  width: 100%;
+
+  p {
+    font-size: 40px;
+    text-decoration: none;
+    position: absolute;
+    color: black;
+    top: 30%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    transform: rotate(-5deg);
+    font-weight: bold;
+  }
 }
 
-.teamBtn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  color: black;
+.ourTeamBtn {
+  transform: rotate(-5deg);
+  object-fit: contain;
+  object-position: center center;
+  width: 100%;
 }
 
 .teamLeft,
@@ -49,7 +85,7 @@
 }
 
 .ottoWrapper {
-  flex: 1;
+  flex: 0.5;
   width: 25%;
 }
 
@@ -82,6 +118,10 @@
     padding: 10px;
     transform: translate(-50%, -50%);
   }
+}
+
+.threeStarsWrapper {
+  margin-top: 500px;
 }
 
 .socialLinks {
@@ -140,16 +180,18 @@
   font-size: 48px;
   width: 50%;
   margin: auto;
+  margin-top: 150px;
 }
 
 .socials {
   display: block;
-  font-weight: bolder;
+  font-weight: normal;
   font-size: 48px;
   width: 50%;
   margin: auto;
   justify-content: space-between;
   margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .socials a:first-child {

@@ -41,7 +41,9 @@ const Navbar = () => {
                     alt={link.label}
                     width={link.imageWidth}
                     height={link.imageHeight}
-                    className={styles.rotatedImage}
+                    className={`${styles.rotatedImage} ${
+                      link.className ? styles[link.className] : ''
+                    }`}
                   />
                 </Link>
               </li>

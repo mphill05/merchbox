@@ -8,7 +8,8 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <p>
-        &copy; {curYear} <Link href={'/'}>MERCHBOX</Link>
+        <span className={styles.copy}>&copy;</span> {curYear}{' '}
+        <Link href={'/'}>MERCHBOX</Link>
       </p>
       <p>5721 CAHUENGA BLVD. NORTH HOLLYWOOD, CA 91601</p>
     </div>

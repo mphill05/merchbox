@@ -8,37 +8,42 @@ export default function Home() {
     <main className={styles.main}>
       <section className={styles.teamSection}>
         <div className={styles.teamLeft}>
-          <p>
-            WE&apos;RE A MERCHANDISE POWERHOUSE FOR MUSICIANS, INFLUENCES AND
-            BRANDS.
-          </p>
-          <button className={styles.tapeBtn}>
-            <Link href={'/ourteam'}>
-              <Image
-                src={'/tape.png'}
-                alt="Meet Our Team Button"
-                height={100}
-                width={400}
-              />
-              <p className={styles.teamBtn}>Meet Our Team</p>
-            </Link>
-          </button>
+          <div className={styles.topText}>
+            <p className={styles.topText}>
+              WE&apos;RE A MERCHANDISE POWERHOUSE FOR MUSICIANS, INFLUENCES AND
+              BRANDS.
+            </p>
+          </div>
+          <div className={styles.teamBtnContainer}>
+            <button className={styles.tapeBtn}>
+              <Link href={'/ourteam'}>
+                <Image
+                  src={'/tape.png'}
+                  alt="Meet Our Team Button"
+                  height={93}
+                  width={476}
+                  className={styles.ourTeamBtn}
+                />
+                <p className={styles.teamBtnText}>Meet Our Team</p>
+              </Link>
+            </button>
+          </div>
         </div>
         <div className={styles.teamRight}>
           <div className={styles.ottoWrapper}>
             <Image
               src={'/otto.png'}
               alt="Otto Merchbox Image"
-              height={500}
-              width={500}
+              height={464}
+              width={448}
             />
           </div>
           <div className={styles.threeStarsWrapper}>
             <Image
               src={'/threeStars.png'}
               alt="Three Stars Image"
-              height={100}
-              width={100}
+              height={129}
+              width={103}
             />
           </div>
         </div>
@@ -167,7 +172,7 @@ export default function Home() {
       </section>
       <section className={styles.socialLinks}>
         <div className={styles.checkout}>
-          <p>CHECK OUT OUR WORK!</p>
+          <h4>CHECK OUT OUR WORK !</h4>
         </div>
         <div className={styles.socials}>
           <a href={styles.instagram} target="_blank" rel="noopener noreferrer">

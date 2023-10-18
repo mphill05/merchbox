@@ -3,29 +3,32 @@ export const navLinks = [
     route: '/',
     label: 'MERCHBOX',
     image: '/merchbox.png',
-    imageWidth: 740,
-    imageHeight: 120
+    imageWidth: 666,
+    imageHeight: 111
   },
   {
     route: '/printready',
     label: 'ARE YOU PRINT READY?',
     image: '/printready.png',
-    imageWidth: 215,
-    imageHeight: 165
+    imageWidth: 203,
+    imageHeight: 156,
+    className: 'Print'
   },
   {
     route: '/faq',
     label: 'FAQ',
     image: '/faq.png',
-    imageWidth: 145,
-    imageHeight: 105
+    imageWidth: 131,
+    imageHeight: 97,
+    className: 'FAQ'
   },
   {
     route: '/contact',
     label: 'CONTACT',
     image: '/contact.png',
-    imageWidth: 230,
-    imageHeight: 115
+    imageWidth: 216,
+    imageHeight: 99,
+    className: 'Contact'
   }
 ];
 
