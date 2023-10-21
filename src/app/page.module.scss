@@ -197,3 +197,21 @@
 .socials a:first-child {
   margin-right: 30px;
 }
+
+.fadeIn {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  &.active {
+    opacity: 1;
+  }
+}
+
+.slideFromRight {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  &.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

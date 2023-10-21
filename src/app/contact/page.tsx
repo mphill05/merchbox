@@ -1,8 +1,10 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import styles from './page.module.scss';
 import 'font-awesome/css/font-awesome.min.css';
+import { Reveal } from '@/components/Reveal/Reveal';
 
 const ContactPage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,9 +37,9 @@ const ContactPage = () => {
   }, [isOpen]);
 
   return (
-    <div className={styles.contactPage}>
+    <Reveal className={styles.contactPage}>
       <div className={styles.formHeader}>LET&apos;S WORK</div>
-      <div className={styles.contactForm}>
+      <Reveal className={styles.contactForm}>
         <form className={styles.form}>
           <div className={styles.nameEmailContainer}>
             <div className={styles.nameContainer}>
@@ -144,8 +146,8 @@ const ContactPage = () => {
             </div>
           </div>
         </form>
-      </div>
-    </div>
+      </Reveal>
+    </Reveal>
   );
 };
 
