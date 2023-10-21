@@ -25,7 +25,7 @@ export const Reveal = ({
     if (inView) {
       mainControls.start('visible');
     }
-  }, [inView]);
+  }, [inView, mainControls]);
 
   return (
     <div ref={inViewRef} className={className} style={{ overflow: 'hidden' }}>
