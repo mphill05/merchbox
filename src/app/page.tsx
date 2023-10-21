@@ -7,8 +7,8 @@ import Link from 'next/link';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 import { Reveal } from '@/components/Reveal/Reveal';
-//@ts-ignore
-import Zoom from 'react-reveal/Zoom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Home() {
   const controls = useAnimation();
@@ -37,6 +37,13 @@ export default function Home() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [controls]);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
 
   return (
     <main className={styles.main}>
@@ -94,17 +101,15 @@ export default function Home() {
         <Reveal className={styles.clientsHeader}>OUR CLIENTS</Reveal>
         <div className={styles.imageGrid}>
           {clientImages.map((link, index) => (
-            <div className={styles.imageWrapper} key={index}>
-              <Zoom>
-                <a href={link.link} target="_blank" rel="noopener noreferrer">
-                  <Image
-                    src={link.image}
-                    alt={link.label}
-                    height={90}
-                    width={250}
-                  />
-                </a>
-              </Zoom>
+            <div data-aos="fade-up" className={styles.imageWrapper} key={index}>
+              <a href={link.link} target="_blank" rel="noopener noreferrer">
+                <Image
+                  src={link.image}
+                  alt={link.label}
+                  height={90}
+                  width={250}
+                />
+              </a>
             </div>
           ))}
         </div>
