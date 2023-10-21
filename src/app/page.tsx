@@ -1,35 +1,80 @@
+'use client';
+
 import { clientImages } from '@/constants';
 import Image from 'next/image';
 import styles from './page.module.scss';
 import Link from 'next/link';
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
+import { Reveal } from '@/components/Reveal/Reveal';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Home() {
+  const controls = useAnimation();
+
+  useEffect(() => {
+    controls.start({
+      opacity: 1,
+      x: 0,
+      transition: { duration: 1 },
+    });
+  }, [controls]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        controls.start({
+          opacity: 1,
+          transition: { duration: 1 },
+        });
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [controls]);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
+
   return (
     <main className={styles.main}>
       <section className={styles.teamSection}>
         <div className={styles.teamLeft}>
-          <div className={styles.topText}>
+          <Reveal className={styles.topText}>
             <p className={styles.topText}>
               WE&apos;RE A MERCHANDISE POWERHOUSE FOR MUSICIANS, INFLUENCES AND
               BRANDS.
             </p>
-          </div>
-          <div className={styles.teamBtnContainer}>
-            <button className={styles.tapeBtn}>
-              <Link href={'/ourteam'}>
-                <Image
-                  src={'/tape.png'}
-                  alt="Meet Our Team Button"
-                  height={93}
-                  width={476}
-                  className={styles.ourTeamBtn}
-                />
-                <p className={styles.teamBtnText}>Meet Our Team</p>
-              </Link>
-            </button>
-          </div>
+            <div className={styles.teamBtnContainer}>
+              <button className={styles.tapeBtn}>
+                <Link href={'/ourteam'}>
+                  <Image
+                    src={'/tape.png'}
+                    alt="Meet Our Team Button"
+                    height={93}
+                    width={476}
+                    className={styles.ourTeamBtn}
+                  />
+                  <p className={styles.teamBtnText}>Meet Our Team</p>
+                </Link>
+              </button>
+            </div>
+          </Reveal>
         </div>
-        <div className={styles.teamRight}>
+        <motion.div
+          className={styles.teamRight}
+          initial={{ x: 100, opacity: 0 }}
+          animate={controls}
+        >
           <div className={styles.ottoWrapper}>
             <Image
               src={'/otto.png'}
@@ -38,21 +83,25 @@ export default function Home() {
               width={448}
             />
           </div>
-          <div className={styles.threeStarsWrapper}>
+          <motion.div
+            className={styles.threeStarsWrapper}
+            initial={{ x: 100, opacity: 0 }}
+            animate={controls}
+          >
             <Image
               src={'/threeStars.png'}
               alt="Three Stars Image"
               height={129}
               width={103}
             />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
       <section className={styles.clients}>
-        <div className={styles.clientsHeader}>OUR CLIENTS</div>
+        <Reveal className={styles.clientsHeader}>OUR CLIENTS</Reveal>
         <div className={styles.imageGrid}>
           {clientImages.map((link, index) => (
-            <div className={styles.imageWrapper} key={index}>
+            <div data-aos="fade-up" className={styles.imageWrapper} key={index}>
               <a href={link.link} target="_blank" rel="noopener noreferrer">
                 <Image
                   src={link.image}
@@ -66,10 +115,10 @@ export default function Home() {
         </div>
       </section>
       <section className={styles.infoSection}>
-        <div className={styles.infoTxt}>
+        <Reveal className={styles.infoTxt}>
           <p>FIRST THING FIRST...</p>
-        </div>
-        <div className={styles.sectionOne}>
+        </Reveal>
+        <Reveal className={styles.sectionOne}>
           <div className={styles.pricing}>
             <h3>
               <Image
@@ -102,9 +151,9 @@ export default function Home() {
               to make sure your artWORK IS ALL SET TO GO!
             </p>
           </div>
-        </div>
+        </Reveal>
         <div className={styles.sectionTwo}>
-          <div className={styles.preProd}>
+          <Reveal className={styles.preProd}>
             <h3>
               <Image
                 src={'/threeStars.png'}
@@ -119,8 +168,8 @@ export default function Home() {
               MOCK UP FOR APPROVAL in order tO queue your order up for
               production,
             </p>
-          </div>
-          <div className={styles.prod}>
+          </Reveal>
+          <Reveal className={styles.prod}>
             <h3>
               PRODUCTION{' '}
               <Image
@@ -134,10 +183,10 @@ export default function Home() {
               We produce your product to the highest quality keeping you updated
               along the way.
             </p>
-          </div>
+          </Reveal>
         </div>
         <div className={styles.sectionThree}>
-          <div className={styles.delivery}>
+          <Reveal className={styles.delivery}>
             <h3>
               <Image
                 src={'/twoStars.png'}
@@ -152,8 +201,8 @@ export default function Home() {
               LA HQ, HAVE US ship to an event or venue, or WE CAN handle THE
               ENTIRE fullfilment PROCESS FROM START TO FINISH!
             </p>
-          </div>
-          <div className={styles.happyClients}>
+          </Reveal>
+          <Reveal className={styles.happyClients}>
             <h3>
               HAPPY CLIENTS & HAPPIER FANS!{' '}
               <Image
@@ -167,21 +216,21 @@ export default function Home() {
               we love building long term partnerships with our clients and are
               already eager to take on your next PROJECT!
             </p>
-          </div>
+          </Reveal>
         </div>
       </section>
       <section className={styles.socialLinks}>
-        <div className={styles.checkout}>
+        <Reveal className={styles.checkout}>
           <h4>CHECK OUT OUR WORK !</h4>
-        </div>
-        <div className={styles.socials}>
+        </Reveal>
+        <Reveal className={styles.socials}>
           <a href={styles.instagram} target="_blank" rel="noopener noreferrer">
             <Image src={'/ig.png'} alt="Instagram" height={55} width={55} />
           </a>
           <a href={styles.tiktok} target="_blank" rel="noopener noreferrer">
             <Image src={'/tiktok.png'} alt="TikTok" height={55} width={55} />
           </a>
-        </div>
+        </Reveal>
       </section>
     </main>
   );
