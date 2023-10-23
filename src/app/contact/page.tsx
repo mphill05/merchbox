@@ -1,17 +1,25 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { motion, useAnimation } from 'framer-motion';
 import styles from './page.module.scss';
 import 'font-awesome/css/font-awesome.min.css';
 import { Reveal } from '@/components/Reveal/Reveal';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const ContactPage = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState('CHOOSE AN OPTION');
   const [selectedOption, setSelectedOption] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [companyArtistName, setCompanyArtistName] = useState('');
+  const [projectDesc, setProjectDesc] = useState('');
+  const [file, setFile] = useState<File | null>(null);
+  const [loading, setLoading] = useState(false);
 
   const options = ['<100', '100-500', '500-1000', '1000-5000', '5000+'];
+
+  const fileInputRef = React.useRef<HTMLInputElement>(null);
 
   const handleClickOutside = (event: any) => {
     if (event.target.closest('.selectWrapper') === null) {
@@ -22,6 +30,67 @@ const ContactPage = () => {
   const handleOptionClick = (option: any) => {
     setSelectedOption(option);
     setIsOpen(false);
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const selectedFile = e.target.files ? e.target.files[0] : null;
+
+    if (selectedFile && selectedFile.size > 15000000) {
+      alert('File size exceeds 15 MB!');
+      e.target.value = '';
+      setFile(null);
+    } else {
+      setFile(selectedFile);
+      e.target.value = '';
+    }
+  };
+
+  const removeFile = () => {
+    setFile(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
+  };
+
+  const handleRecaptchaChange = (value: any) => {
+    console.log('Captch value:', value);
+  };
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+
+    const formData = {
+      name: e.target.Name.value,
+      email: e.target.Email.value,
+      companyArtistName: e.target.CompanyArtistName.value,
+      quantities: selectedValue,
+      projectDesc: e.target.projectDesc.value,
+      file: file,
+    };
+
+    try {
+      setLoading(true);
+
+      const response = await fetch('/pages/email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data);
+      } else {
+        console.log('Failed to send email');
+      }
+    } catch (error: unknown) {
+      const e = error as Error;
+      setLoading(false);
+      console.log('Frontend Error:', e.message);
+      console.log('Frontend Error Object:', JSON.stringify(e, null, 2));
+    }
   };
 
   useEffect(() => {
@@ -40,13 +109,20 @@ const ContactPage = () => {
     <Reveal className={styles.contactPage}>
       <div className={styles.formHeader}>LET&apos;S WORK</div>
       <Reveal className={styles.contactForm}>
-        <form className={styles.form}>
+        <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.nameEmailContainer}>
             <div className={styles.nameContainer}>
               <label htmlFor="Name" title="Name">
                 NAME *
               </label>
-              <input id="Name" type="text" placeholder="OTTO" required />
+              <input
+                id="Name"
+                type="text"
+                placeholder="OTTO"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
             </div>
             <div className={styles.emailContainer}>
               <label htmlFor="Email" title="Email">
@@ -56,6 +132,8 @@ const ContactPage = () => {
                 id="Email"
                 type="email"
                 placeholder="HI@MERCHBOX.INFO"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
@@ -67,8 +145,11 @@ const ContactPage = () => {
               </label>
               <input
                 id="Company/Artist Name"
+                name="CompanyArtistName"
                 type="text"
                 placeholder="MERCHBOX"
+                value={companyArtistName}
+                onChange={(e) => setCompanyArtistName(e.target.value)}
               ></input>
             </div>
             <div className={styles.quantitiesContainer}>
@@ -117,6 +198,8 @@ const ContactPage = () => {
               rows={2}
               cols={30}
               placeholder='EX: "200 BLACK T-SHIRT WITH LOGO ON THE FRONT LEFT AND A LARGE BACK PRINT WITH PRINTED NECK TAGS. I NEED THEM FOR MY TOUR IN NOVEMBER'
+              value={projectDesc}
+              onChange={(e) => setProjectDesc(e.target.value)}
             ></textarea>
           </div>
           <div className="mockUpContainer">
@@ -132,17 +215,38 @@ const ContactPage = () => {
               name="file"
               className={styles.mockUpBtn}
               style={{ display: 'none' }}
+              onChange={handleFileChange}
             />
-            <p className={styles.mockUpUnderText}>MAX FILE SIZE 15MB</p>
-            {/* Add captcha here */}
+            {file ? (
+              <div className={styles.uploadedFileText}>
+                <span onClick={removeFile}>x</span>
+                <span style={{ marginLeft: '10px' }}>{file.name}</span>
+              </div>
+            ) : (
+              <p className={styles.mockUpUnderText}>MAX FILE SIZE 15MB</p>
+            )}
             <div className={styles.submitBtnContainer}>
-              <button
-                className={styles.submitBtn}
-                type="submit"
-                value={'Submit'}
-              >
-                Send!
-              </button>
+              <ReCAPTCHA
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
+                onChange={handleRecaptchaChange}
+              />
+              {loading ? (
+                <button
+                  disabled
+                  type="button"
+                  className={styles.disabledSubmitBtn}
+                >
+                  Sending...
+                </button>
+              ) : (
+                <button
+                  className={styles.submitBtn}
+                  type="submit"
+                  value={'Submit'}
+                >
+                  Send!
+                </button>
+              )}
             </div>
           </div>
         </form>

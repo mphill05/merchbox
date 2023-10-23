@@ -7,10 +7,12 @@
 }
 
 .formHeader {
-  padding-top: 2em;
+  padding-top: 1.5em;
   padding-bottom: 1em;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   text-transform: uppercase;
+  text-align: center;
+  font-family: 'Diogenes', sans-serif;
 }
 
 .contactForm {
@@ -18,7 +20,7 @@
   justify-content: center;
   align-items: center;
   border: 5px solid black;
-  padding: 2em 1em;
+  padding: 2em;
 }
 
 .form {
@@ -59,12 +61,28 @@
     margin-bottom: 1em;
     border: 4px solid black;
     height: 60px;
+    font-family: 'Diogenes', sans-serif;
+    font-style: italic;
   }
 
   input::placeholder,
   textarea::placeholder {
     color: lightgray;
     font-size: 16px;
+    font-family: 'Diogenes', sans-serif;
+    font-style: italic;
+  }
+
+  input[type='text']:hover,
+  input[type='email']:hover,
+  textarea:hover {
+    color: black;
+  }
+
+  input[type='text']:hover::placeholder,
+  input[type='email']:hover::placeholder,
+  textarea:hover::placeholder {
+    color: black;
   }
 
   select {
@@ -93,6 +111,8 @@
       width: 100%;
       height: 60px;
       line-height: 25px;
+      font-family: 'Diogenes', sans-serif;
+      font-style: italic;
 
       &:hover {
         color: #000;
@@ -119,6 +139,8 @@
         padding: 6px;
         color: black;
         width: 100%;
+        font-family: 'Diogenes', sans-serif;
+        font-style: italic;
 
         &:hover {
           color: lightgray;
@@ -149,7 +171,6 @@
     display: block;
     background-color: #333;
     color: white;
-    padding: 0.5em 1em;
     border: none;
     text-transform: uppercase;
     text-align: center;
@@ -159,6 +180,9 @@
     border-radius: 0;
     background-color: #000;
     margin: auto;
+    font-family: 'Diogenes', sans-serif;
+    font-size: 30px;
+    transition: transform 0.3s ease;
   }
 }
 
@@ -186,6 +210,11 @@
 .projectContainer {
   textarea {
     height: 80px;
+
+    &:hover {
+      color: black;
+      cursor: pointer;
+    }
   }
 }
 
@@ -203,8 +232,11 @@
   text-align: center;
   border: 4px solid black;
   color: lightgray !important;
+  background-color: #fff;
   cursor: pointer;
   padding: 15px 60px;
+  font-family: 'Diogenes', sans-serif;
+  font-style: italic;
 
   &:hover {
     color: #000 !important;
@@ -219,6 +251,11 @@
   padding-top: 5px;
 }
 
+.uploadedFileText {
+  font-family: 'Diogenes', sans-serif;
+  cursor: pointer;
+}
+
 .bottomForm {
   display: flex;
   justify-content: center;
@@ -227,6 +264,20 @@
 }
 
 .submitBtnContainer {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+
+  button {
+    margin-top: 20px;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.disabledSubmitBtn {
   display: block;
   align-items: center;
   justify-content: center;
