@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { motion, useAnimation } from 'framer-motion';
 import styles from './page.module.scss';
 import 'font-awesome/css/font-awesome.min.css';
 import { Reveal } from '@/components/Reveal/Reveal';
@@ -16,6 +15,7 @@ const ContactPage = () => {
   const [companyArtistName, setCompanyArtistName] = useState('');
   const [projectDesc, setProjectDesc] = useState('');
   const [file, setFile] = useState<File | null>(null);
+  const [loading, setLoading] = useState(false);
 
   const options = ['<100', '100-500', '500-1000', '1000-5000', '5000+'];
 
@@ -68,20 +68,28 @@ const ContactPage = () => {
       file: file,
     };
 
-    const response = await fetch('/api/sendEmail', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
+    try {
+      setLoading(true);
 
-    const data = await response.json();
+      const response = await fetch('/pages/email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    if (data.success) {
-      alert('Email sent successfully!');
-    } else {
-      alert('Email failed to send!');
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data);
+      } else {
+        console.log('Failed to send email');
+      }
+    } catch (error: unknown) {
+      const e = error as Error;
+      setLoading(false);
+      console.log('Frontend Error:', e.message);
+      console.log('Frontend Error Object:', JSON.stringify(e, null, 2));
     }
   };
 
@@ -222,13 +230,23 @@ const ContactPage = () => {
                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
                 onChange={handleRecaptchaChange}
               />
-              <button
-                className={styles.submitBtn}
-                type="submit"
-                value={'Submit'}
-              >
-                Send!
-              </button>
+              {loading ? (
+                <button
+                  disabled
+                  type="button"
+                  className={styles.disabledSubmitBtn}
+                >
+                  Sending...
+                </button>
+              ) : (
+                <button
+                  className={styles.submitBtn}
+                  type="submit"
+                  value={'Submit'}
+                >
+                  Send!
+                </button>
+              )}
             </div>
           </div>
         </form>
