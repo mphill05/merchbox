@@ -79,6 +79,22 @@
   }
 }
 
+.mobileMenu {
+  position: fixed;
+  top: 80px;
+  right: -100vw;
+  width: 100vw;
+  height: 100%;
+  background-color: #d8d0bb;
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  z-index: 10000;
+}
+
+.open {
+  right: 0;
+}
+
 @media (max-width: 768px) {
   .navbar {
     height: 80px;
@@ -95,5 +111,28 @@
 
   .navRight {
     display: none;
+  }
+
+  .hambugerMenuWrapper {
+    margin-top: 15px;
+    margin-right: 20px;
+  }
+
+  .mobileNavLinks {
+    margin-top: 20px;
+  }
+
+  .link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
   }
 }
