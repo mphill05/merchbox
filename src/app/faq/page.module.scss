@@ -15,3 +15,23 @@
 .accordian {
   width: 60vw;
 }
+
+@media (max-width: 768px) {
+  .FaqMain {
+    width: 100vw;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+
+    h3 {
+      font-size: 16px;
+      padding: 1rem 0 2rem 0;
+      width: 90vw;
+      margin: auto;
+      text-align: center;
+    }
+  }
+  .accordian {
+    width: 80vw;
+    font-size: 12px;
+  }
+}

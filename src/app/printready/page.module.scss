@@ -133,3 +133,99 @@
     margin: 10px 0;
   }
 }
+
+@media (max-width: 768px) {
+  .main {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+
+    h3 {
+      font-size: 13px;
+    }
+  }
+
+  .printPage {
+    width: 90vw;
+    margin: auto;
+  }
+
+  .topHeader {
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .criteria {
+    width: 90vw;
+    margin: auto;
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .merchBoxDPI {
+    p {
+      padding-bottom: 50px;
+    }
+  }
+
+  .coloring {
+    width: 90vw;
+    margin: auto;
+    p {
+      font-size: 15px;
+      padding-bottom: 50px;
+    }
+  }
+
+  .pantoneText {
+    p {
+      font-size: 14px;
+      padding-bottom: 70px;
+      margin: -20px auto;
+    }
+  }
+
+  .colorMode {
+    p {
+      font-size: 14px;
+      padding-bottom: 25px;
+    }
+  }
+
+  .printDimensions {
+    width: 90vw;
+    margin: auto;
+
+    p {
+      font-size: 14px;
+      padding-bottom: 50px;
+    }
+  }
+
+  .tshirtWrapper {
+    width: 90vw;
+    margin-bottom: 50px;
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .spVdtg p {
+    font-size: 14px;
+    padding: 25px 0;
+  }
+
+  .checkList p {
+    font-size: 14px;
+    padding-top: 25px;
+  }
+
+  .thanks {
+    p {
+      font-size: 14px;
+    }
+  }
+}

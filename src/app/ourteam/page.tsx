@@ -23,6 +23,7 @@ const TeamPage = () => {
               height={300}
               width={300}
               className={styles.teamImg}
+              style={{ width: '60%', height: 'auto' }}
             />
             <div className={styles.teamInfo}>
               <h3>{data.name}</h3>

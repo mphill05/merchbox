@@ -21,6 +21,7 @@ const PrintPage = () => {
               alt="File Types"
               height={85}
               width={370}
+              style={{ width: '60%', height: 'auto' }}
             />
           </div>
         </div>
@@ -47,6 +48,7 @@ const PrintPage = () => {
             alt="Logo LQ"
             height={140}
             width={500}
+            style={{ width: '80%', height: 'auto' }}
           />
           <div className={styles.merchBoxDPI}>
             <p>300 DPI</p>
@@ -68,6 +70,7 @@ const PrintPage = () => {
             alt="MB Pantone"
             height={166}
             width={420}
+            style={{ width: '70%', height: 'auto' }}
           />
           <div className={styles.pantoneText}>
             <p>
@@ -90,6 +93,7 @@ const PrintPage = () => {
             alt="RGB CMYK"
             height={142}
             width={392}
+            style={{ width: '80%', height: 'auto' }}
           />
         </div>
         <div className={styles.printDimensions}>
@@ -107,6 +111,7 @@ const PrintPage = () => {
               alt="T-Shirt"
               height={285}
               width={278}
+              style={{ width: '90%', height: 'auto' }}
             />
             <div className={styles.printDimImgText}>
               <p>two inches below the collar, center chest position</p>
@@ -125,6 +130,7 @@ const PrintPage = () => {
             alt="Screen Print VS DTG"
             height={223}
             width={426}
+            style={{ width: '80%', height: 'auto' }}
           />
           <p>
             We USUALLY avoid screenprinting over seams, collars, and zippers SO
@@ -135,7 +141,13 @@ const PrintPage = () => {
           </p>
         </div>
         <div className={styles.checkList}>
-          <Image src={'/otto.png'} alt="Otto" height={215} width={215} />
+          <Image
+            src={'/otto.png'}
+            alt="Otto"
+            height={215}
+            width={215}
+            style={{ width: '60%', height: 'auto' }}
+          />
           <p>
             ONCE YOUR PRINT READY CHECKLIST IS COMPLETE, We can start production
             after one of our team members approves the art.
@@ -156,7 +168,13 @@ const PrintPage = () => {
           </p>
         </div>
         <div className={styles.thanks}>
-          <Image src={'/twoStars.png'} alt="Two Stars" height={65} width={46} />
+          <Image
+            src={'/twoStars.png'}
+            alt="Two Stars"
+            height={65}
+            width={46}
+            style={{ width: '15%', height: 'auto' }}
+          />
           <p>thanks for choosing merchbox :)</p>
           <p>we can&apos;t wait to bring your project to life!</p>
         </div>

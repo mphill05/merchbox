@@ -15,6 +15,7 @@ const Navbar = () => {
                 alt={navLinks[0].label}
                 width={navLinks[0].imageWidth}
                 height={navLinks[0].imageHeight}
+                // style={{ width: '100%', height: 'auto' }}
                 className={styles.logo}
               />
             </Link>
@@ -30,6 +31,7 @@ const Navbar = () => {
                     alt="Separator"
                     width={70}
                     height={7}
+                    // style={{ width: '100%', height: 'auto' }}
                     className={styles.separator}
                   />
                 </div>
@@ -41,6 +43,7 @@ const Navbar = () => {
                     alt={link.label}
                     width={link.imageWidth}
                     height={link.imageHeight}
+                    // style={{ width: '100%', height: 'auto' }}
                     className={`${styles.rotatedImage} ${
                       link.className ? styles[link.className] : ''
                     }`}
