@@ -19,7 +19,7 @@ const Accordian: React.FC<AccordianProps> = ({ title, content }) => {
     <div className={styles.accordian}>
       <div className={styles.header} onClick={toggleOpen}>
         <span>{title}</span>
-        <button>{isOpen ? '-' : '+'}</button>
+        <button className={styles.accordianBtn}>{isOpen ? '-' : '+'}</button>
       </div>
       {isOpen && <div className={styles.content}>{content}</div>}
     </div>

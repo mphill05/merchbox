@@ -62,6 +62,12 @@
   }
 }
 
+.coloring {
+  p {
+    padding-bottom: 50px;
+  }
+}
+
 .pantoneText {
   p {
     font-size: 18px;
@@ -81,12 +87,24 @@
   }
 }
 
+.mobileBreak {
+  display: none;
+}
+
+.cmykImgWrapper {
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .tshirtWrapper {
   position: relative;
   width: 50vw;
   height: 285px;
   margin: auto;
   margin-bottom: 100px;
+  margin-top: 50px;
 }
 
 .printDimImgText {
@@ -157,6 +175,26 @@
     }
   }
 
+  .formats {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding-bottom: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60vw;
+      height: auto;
+      transform: translate(-50%, -50%);
+    }
+  }
+
   .criteria {
     width: 90vw;
     margin: auto;
@@ -165,9 +203,33 @@
     }
   }
 
+  .merchBoxLqImgWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80vw;
+      height: auto;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+  }
+
   .merchBoxDPI {
+    text-align: center;
+
     p {
-      padding-bottom: 50px;
+      padding-bottom: 25px;
     }
   }
 
@@ -188,11 +250,25 @@
     }
   }
 
+  .pantone img {
+    width: 70vw;
+    height: auto;
+  }
+
+  .colorMode img {
+    width: 80vw;
+    height: auto;
+  }
+
   .colorMode {
     p {
       font-size: 14px;
       padding-bottom: 25px;
     }
+  }
+
+  .mobileBreak {
+    display: inline;
   }
 
   .printDimensions {
@@ -206,16 +282,59 @@
   }
 
   .tshirtWrapper {
-    width: 90vw;
-    margin-bottom: 50px;
-    p {
-      font-size: 14px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60vw;
+      height: auto;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+  }
+
+  .spVdtgWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80vw;
+      height: auto;
+      transform: translate(-50%, -50%);
+      z-index: 1;
     }
   }
 
   .spVdtg p {
     font-size: 14px;
     padding: 25px 0;
+    width: 90%;
+    margin: auto;
+  }
+
+  .checkList img {
+    width: 60vw;
+    height: auto;
   }
 
   .checkList p {
@@ -227,5 +346,10 @@
     p {
       font-size: 14px;
     }
+  }
+
+  .thanks img {
+    width: 15vw;
+    height: auto;
   }
 }
