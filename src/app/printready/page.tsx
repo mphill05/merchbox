@@ -21,7 +21,6 @@ const PrintPage = () => {
               alt="File Types"
               height={85}
               width={370}
-              style={{ width: '60%', height: 'auto' }}
             />
           </div>
         </div>
@@ -43,13 +42,14 @@ const PrintPage = () => {
           </p>
         </div>
         <div className={styles.merchBoxLq}>
-          <Image
-            src={'/merchboxlq.webp'}
-            alt="Logo LQ"
-            height={140}
-            width={500}
-            style={{ width: '80%', height: 'auto' }}
-          />
+          <div className={styles.merchBoxLqImgWrapper}>
+            <Image
+              src={'/merchboxlq.webp'}
+              alt="Logo LQ"
+              height={140}
+              width={500}
+            />
+          </div>
           <div className={styles.merchBoxDPI}>
             <p>300 DPI</p>
             <p>72 DPI</p>
@@ -70,7 +70,6 @@ const PrintPage = () => {
             alt="MB Pantone"
             height={166}
             width={420}
-            style={{ width: '70%', height: 'auto' }}
           />
           <div className={styles.pantoneText}>
             <p>
@@ -86,15 +85,19 @@ const PrintPage = () => {
         <div className={styles.colorMode}>
           <p>
             COLOR MODE SETTING MUST BE SET TO CMYK,{' '}
+            <span className={styles.mobileBreak}>
+              <br />
+            </span>{' '}
             <u>we will not accept rgb</u>
           </p>
-          <Image
-            src={'/rgbcmyk.webp'}
-            alt="RGB CMYK"
-            height={142}
-            width={392}
-            style={{ width: '80%', height: 'auto' }}
-          />
+          <div className={styles.cmykImgWrapper}>
+            <Image
+              src={'/rgbcmyk.webp'}
+              alt="RGB CMYK"
+              height={142}
+              width={392}
+            />
+          </div>
         </div>
         <div className={styles.printDimensions}>
           <p>
@@ -111,7 +114,6 @@ const PrintPage = () => {
               alt="T-Shirt"
               height={285}
               width={278}
-              style={{ width: '90%', height: 'auto' }}
             />
             <div className={styles.printDimImgText}>
               <p>two inches below the collar, center chest position</p>
@@ -125,13 +127,14 @@ const PrintPage = () => {
           </p>
         </div>
         <div className={styles.spVdtg}>
-          <Image
-            src={'/spVdtg.webp'}
-            alt="Screen Print VS DTG"
-            height={223}
-            width={426}
-            style={{ width: '80%', height: 'auto' }}
-          />
+          <div className={styles.spVdtgWrapper}>
+            <Image
+              src={'/spVdtg.webp'}
+              alt="Screen Print VS DTG"
+              height={223}
+              width={426}
+            />
+          </div>
           <p>
             We USUALLY avoid screenprinting over seams, collars, and zippers SO
             THAT WE CAN HAVE a flat printing surface, BUT IF THAT&apos;s THE
@@ -141,13 +144,7 @@ const PrintPage = () => {
           </p>
         </div>
         <div className={styles.checkList}>
-          <Image
-            src={'/otto.png'}
-            alt="Otto"
-            height={215}
-            width={215}
-            style={{ width: '60%', height: 'auto' }}
-          />
+          <Image src={'/otto.png'} alt="Otto" height={215} width={215} />
           <p>
             ONCE YOUR PRINT READY CHECKLIST IS COMPLETE, We can start production
             after one of our team members approves the art.
@@ -168,13 +165,7 @@ const PrintPage = () => {
           </p>
         </div>
         <div className={styles.thanks}>
-          <Image
-            src={'/twoStars.png'}
-            alt="Two Stars"
-            height={65}
-            width={46}
-            style={{ width: '15%', height: 'auto' }}
-          />
+          <Image src={'/twoStars.png'} alt="Two Stars" height={65} width={46} />
           <p>thanks for choosing merchbox :)</p>
           <p>we can&apos;t wait to bring your project to life!</p>
         </div>
