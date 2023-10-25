@@ -60,6 +60,7 @@ export default function Home() {
                   <Image
                     src={'/tape.png'}
                     alt="Meet Our Team Button"
+                    style={{ width: '100%', height: 'auto' }}
                     height={93}
                     width={476}
                     className={styles.ourTeamBtn}
@@ -79,6 +80,7 @@ export default function Home() {
             <Image
               src={'/otto.png'}
               alt="Otto Merchbox Image"
+              style={{ width: '150%', height: 'auto' }}
               height={464}
               width={448}
             />
@@ -89,16 +91,19 @@ export default function Home() {
             animate={controls}
           >
             <Image
-              src={'/threeStars.png'}
+              src="/threeStars.png"
               alt="Three Stars Image"
-              height={129}
+              style={{ width: '30%', height: 'auto' }}
               width={103}
+              height={129}
             />
           </motion.div>
         </motion.div>
       </section>
       <section className={styles.clients}>
-        <Reveal className={styles.clientsHeader}>OUR CLIENTS</Reveal>
+        <Reveal className={styles.clientsHeader}>
+          <p>OUR CLIENTS</p>
+        </Reveal>
         <div className={styles.imageGrid}>
           {clientImages.map((link, index) => (
             <div data-aos="fade-up" className={styles.imageWrapper} key={index}>
@@ -108,6 +113,7 @@ export default function Home() {
                   alt={link.label}
                   height={90}
                   width={250}
+                  style={{ width: '100%', height: 'auto' }}
                 />
               </a>
             </div>
@@ -126,6 +132,7 @@ export default function Home() {
                 alt="Two Stars"
                 height={60}
                 width={60}
+                style={{ width: '10%', height: 'auto' }}
               />
               PRICING &amp; TIMELINE
             </h3>
@@ -143,6 +150,7 @@ export default function Home() {
                 alt="Three Stars"
                 height={60}
                 width={60}
+                style={{ width: '10%', height: 'auto' }}
               />
             </h3>
             <p>
@@ -160,6 +168,7 @@ export default function Home() {
                 alt="Three Stars"
                 height={60}
                 width={60}
+                style={{ width: '10%', height: 'auto' }}
               />
               PRE-PRODUCTION
             </h3>
@@ -177,6 +186,7 @@ export default function Home() {
                 alt="Two Stars"
                 height={60}
                 width={60}
+                style={{ width: '10%', height: 'auto' }}
               />
             </h3>
             <p>
@@ -193,6 +203,7 @@ export default function Home() {
                 alt="Two Stars"
                 height={60}
                 width={60}
+                style={{ width: '10%', height: 'auto' }}
               />{' '}
               DELIVERY &amp; FULFILLMENT
             </h3>
@@ -210,6 +221,7 @@ export default function Home() {
                 alt="Two Stars"
                 height={60}
                 width={60}
+                style={{ width: '10%', height: 'auto' }}
               />
             </h3>
             <p>
@@ -225,10 +237,22 @@ export default function Home() {
         </Reveal>
         <Reveal className={styles.socials}>
           <a href={styles.instagram} target="_blank" rel="noopener noreferrer">
-            <Image src={'/ig.png'} alt="Instagram" height={55} width={55} />
+            <Image
+              src={'/ig.png'}
+              alt="Instagram"
+              height={55}
+              width={55}
+              style={{ width: '30%', height: 'auto' }}
+            />
           </a>
           <a href={styles.tiktok} target="_blank" rel="noopener noreferrer">
-            <Image src={'/tiktok.png'} alt="TikTok" height={55} width={55} />
+            <Image
+              src={'/tiktok.png'}
+              alt="TikTok"
+              height={55}
+              width={55}
+              style={{ width: '30%', height: 'auto' }}
+            />
           </a>
         </Reveal>
       </section>

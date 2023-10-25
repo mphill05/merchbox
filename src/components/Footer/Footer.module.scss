@@ -25,3 +25,13 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 1rem 0;
+
+    p {
+      font-size: 14px;
+    }
+  }
+}

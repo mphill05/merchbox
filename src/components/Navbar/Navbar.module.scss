@@ -78,3 +78,22 @@
     transition: transform 0.3s ease;
   }
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 80px;
+  }
+
+  .navLeft {
+    width: 80vw;
+
+    img {
+      width: 60%;
+      height: 50px;
+    }
+  }
+
+  .navRight {
+    display: none;
+  }
+}

@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  // padding: 2rem;
   min-height: 100vh;
 
   p {
@@ -15,7 +14,6 @@
   font-size: 54px;
   font-weight: normal;
   width: 90%;
-  margin-top: -100px;
   margin-left: 70px;
   letter-spacing: 0.08em;
   line-height: 1.2;
@@ -67,6 +65,16 @@
   width: 100%;
 }
 
+.teamBtnText {
+  font-size: calc(10px + 1vw);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-5deg);
+  white-space: nowrap;
+  z-index: 2;
+}
+
 .teamLeft,
 .teamRight {
   flex: 1;
@@ -84,6 +92,11 @@
   width: 100%;
 }
 
+.ottoWrapper,
+.threeStarsWrapper {
+  flex: 1;
+}
+
 .ottoWrapper {
   flex: 0.5;
   width: 25%;
@@ -91,7 +104,7 @@
 
 .clientsHeader {
   text-align: center;
-  font-size: 58px;
+  font-size: 72px;
   padding-bottom: 50px;
 }
 
@@ -130,7 +143,7 @@
 
 .infoTxt {
   text-align: center;
-  font-size: 65px;
+  font-size: 72px;
   padding: 80px 0;
 }
 
@@ -213,5 +226,84 @@
   &.active {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    width: 90%;
+    margin: auto;
+  }
+
+  .teamSection {
+    height: 40vh;
+  }
+
+  .topText {
+    font-size: 18px;
+    margin-top: 0px;
+  }
+
+  .ottoWrapper,
+  .threeStarsWrapper {
+    flex: 1;
+  }
+
+  .threeStarsWrapper {
+    margin-top: 200px;
+  }
+
+  .tapeBtn {
+    object-fit: contain;
+    width: 100%;
+
+    p {
+      font-size: 10px;
+      top: 20%;
+      left: 10%;
+    }
+  }
+
+  .clientsHeader {
+    font-size: 30px;
+  }
+
+  .infoTxt {
+    font-size: 30px;
+    padding: 40px;
+  }
+
+  .sectionOne {
+    height: 60vh;
+  }
+
+  .sectionTwo,
+  .sectionThree {
+    height: 40vh;
+  }
+
+  .pricing h3,
+  .printReady h3,
+  .preProd h3,
+  .prod h3,
+  .delivery h3,
+  .happyClients h3 {
+    font-size: 12px;
+  }
+
+  .pricing p,
+  .printReady p,
+  .preProd p,
+  .prod p,
+  .delivery p,
+  .happyClients p {
+    font-size: 12px;
+  }
+
+  .checkout {
+    margin-top: 50px;
+    h4 {
+      font-size: 20px;
+    }
   }
 }

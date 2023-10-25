@@ -282,4 +282,69 @@
   align-items: center;
   justify-content: center;
   padding-top: 20px;
+  font-size: 18px !important;
+}
+
+@media (max-width: 768px) {
+  .contactPage {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .formHeader {
+    padding-top: 0;
+  }
+
+  .contactForm {
+    padding: 1em;
+  }
+
+  .form {
+    width: 100%;
+
+    p {
+      font-size: 0.7rem;
+    }
+
+    .form-group {
+      min-width: 100%;
+    }
+
+    label {
+      font-size: 0.5em;
+    }
+
+    .selectedValue {
+      font-size: 0.7rem;
+    }
+
+    .caret {
+      line-height: 30px;
+      text-align: center;
+    }
+
+    input::placeholder {
+      font-size: 0.7rem;
+    }
+
+    textarea::placeholder {
+      font-size: 0.7rem;
+    }
+  }
+
+  .formHeader {
+    font-size: 2rem;
+  }
+
+  .mockUpContainer {
+    width: 100%;
+  }
+
+  .customMockUpBtn {
+    padding: 15px 30px;
+  }
+
+  .uploadedFileText {
+    font-size: 14px;
+  }
 }
