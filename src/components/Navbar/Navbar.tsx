@@ -94,9 +94,10 @@ const Navbar = () => {
           </div>
           <div className={styles.socials}>
             <a
-              href={styles.instagram}
+              href={'https://www.instagram.com/merchbox/'}
               target="_blank"
               rel="noopener noreferrer"
+              className={styles.instagram}
             >
               <Image
                 src={'/ig.png'}
@@ -106,7 +107,12 @@ const Navbar = () => {
                 style={{ width: '50%', height: 'auto' }}
               />
             </a>
-            <a href={styles.tiktok} target="_blank" rel="noopener noreferrer">
+            <a
+              href={'https://www.tiktok.com/@merchbox_la'}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.tiktok}
+            >
               <Image
                 src={'/tiktok.png'}
                 alt="TikTok"
