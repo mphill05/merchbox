@@ -6,8 +6,10 @@ import styles from './Navbar.module.scss';
 import Image from 'next/image';
 import { useState } from 'react';
 import { Divide as Hamburger } from 'hamburger-react';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
+  const currentPath = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -16,6 +18,20 @@ const Navbar = () => {
 
   const closeMenu = () => {
     setMenuOpen(false);
+  };
+
+  const handleLinkClick = (e: React.MouseEvent, route: string) => {
+    e.preventDefault();
+
+    if (currentPath === route) {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    } else {
+      window.location.href = route;
+    }
+    closeMenu();
   };
 
   return (
@@ -30,7 +46,7 @@ const Navbar = () => {
                 width={navLinks[0].imageWidth}
                 height={navLinks[0].imageHeight}
                 className={styles.logo}
-                onClick={closeMenu}
+                onClick={(e) => handleLinkClick(e, navLinks[0].route)}
               />
             </Link>
           </li>
@@ -59,6 +75,7 @@ const Navbar = () => {
                     className={`${styles.rotatedImage} ${
                       link.className ? styles[link.className] : ''
                     }`}
+                    onClick={(e) => handleLinkClick(e, link.route)}
                   />
                 </Link>
               </li>

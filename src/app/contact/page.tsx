@@ -27,15 +27,11 @@ const ContactPage = () => {
     }
   };
 
-  const handleOptionClick = (option: any) => {
-    setSelectedOption(option);
-    setIsOpen(false);
-  };
-
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files ? e.target.files[0] : null;
+    const maxFileSize = 15 * 1024 * 1024;
 
-    if (selectedFile && selectedFile.size > 15000000) {
+    if (selectedFile && selectedFile.size > maxFileSize) {
       alert('File size exceeds 15 MB!');
       e.target.value = '';
       setFile(null);
