@@ -236,7 +236,12 @@ export default function Home() {
           <h4>CHECK OUT OUR WORK !</h4>
         </Reveal>
         <Reveal className={styles.socials}>
-          <a href={styles.instagram} target="_blank" rel="noopener noreferrer">
+          <a
+            href={'https://www.instagram.com/merchbox/'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.instagram}
+          >
             <Image
               src={'/ig.png'}
               alt="Instagram"
@@ -245,7 +250,12 @@ export default function Home() {
               style={{ width: '30%', height: 'auto' }}
             />
           </a>
-          <a href={styles.tiktok} target="_blank" rel="noopener noreferrer">
+          <a
+            href={'https://www.tiktok.com/@merchbox_la'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.tiktok}
+          >
             <Image
               src={'/tiktok.png'}
               alt="TikTok"
