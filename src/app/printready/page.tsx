@@ -117,6 +117,22 @@ const PrintPage = () => {
             />
             <div className={styles.printDimImgText}>
               <p>two inches below the collar, center chest position</p>
+              <div className={styles.redLine}>
+                <Image
+                  src={'/redLine.webp'}
+                  alt="Dotted Line"
+                  width={270}
+                  height={50}
+                />
+              </div>
+              <div className={styles.redLine2}>
+                <Image
+                  src={'/redLine.webp'}
+                  alt="Dotted Line"
+                  width={170}
+                  height={50}
+                />
+              </div>
               <p>1/2 INCH ABOVE LEFT SLEEVE INSEAM, CENTERED ON SLEEVE </p>
             </div>
           </div>
