@@ -29,12 +29,14 @@ export async function sendMail(formData: FormData) {
     text: JSON.stringify(formData),
   };
 
-  transporter.sendMail(mailOptions, function (error: any, info: any) {
-    if (error) {
-      throw new Error('sendMail error:', error);
-    } else {
-      console.log('Email sent: ' + info.response);
-      return info.response;
-    }
+  return new Promise((resolve, reject) => {
+    transporter.sendMail(mailOptions, function (error: any, info: any) {
+      if (error) {
+        reject(new Error('sendMail error: ' + error));
+      } else {
+        console.log('Email sent: ' + info.response);
+        resolve(info.response);
+      }
+    });
   });
 }

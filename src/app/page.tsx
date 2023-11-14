@@ -142,6 +142,9 @@ export default function Home() {
               can adjust to your needs!
             </p>
           </div>
+          <Reveal className={styles.lineLeft}>
+            <Image src={'/line.webp'} width={400} height={10} alt="line" />
+          </Reveal>
           <div className={styles.printReady}>
             <h3>
               PRINT READY{' '}
@@ -159,6 +162,9 @@ export default function Home() {
               to make sure your artWORK IS ALL SET TO GO!
             </p>
           </div>
+        </Reveal>
+        <Reveal className={styles.lineRight}>
+          <Image src={'/line.webp'} width={340} height={10} alt="line" />
         </Reveal>
         <div className={styles.sectionTwo}>
           <Reveal className={styles.preProd}>
@@ -178,6 +184,9 @@ export default function Home() {
               production,
             </p>
           </Reveal>
+          <Reveal className={styles.lineLeft2}>
+            <Image src={'/line.webp'} width={300} height={10} alt="line" />
+          </Reveal>
           <Reveal className={styles.prod}>
             <h3>
               PRODUCTION{' '}
@@ -195,6 +204,9 @@ export default function Home() {
             </p>
           </Reveal>
         </div>
+        <Reveal className={styles.lineRight2}>
+          <Image src={'/line.webp'} width={300} height={10} alt="line" />
+        </Reveal>
         <div className={styles.sectionThree}>
           <Reveal className={styles.delivery}>
             <h3>
@@ -212,6 +224,9 @@ export default function Home() {
               LA HQ, HAVE US ship to an event or venue, or WE CAN handle THE
               ENTIRE fullfilment PROCESS FROM START TO FINISH!
             </p>
+          </Reveal>
+          <Reveal className={styles.lineLeft3}>
+            <Image src={'/line.webp'} width={350} height={10} alt="line" />
           </Reveal>
           <Reveal className={styles.happyClients}>
             <h3>
