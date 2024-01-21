@@ -1,0 +1,37 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+
+  .copy {
+    font-family: 'Cooper Black MN', sans-serif;
+  }
+
+  p {
+    margin: 0;
+    padding: 0.2rem;
+    text-align: center;
+    font-family: 'Diogenes', sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 1rem 0;
+
+    p {
+      font-size: 14px;
+    }
+  }
+}

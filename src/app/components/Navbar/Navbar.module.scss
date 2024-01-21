@@ -1,0 +1,163 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #d8d0bb;
+  border: 3px solid black;
+  z-index: 9999;
+  height: 170px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.navLeft {
+  width: 50%;
+  img {
+    max-width: 80%;
+    object-fit: contain;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-left: 50px;
+  margin-top: 12px;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.navLeft,
+.navRight {
+  display: flex;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  height: 175px;
+  margin-right: 18px;
+  margin-top: -5px;
+
+  img {
+    max-width: 90%;
+    object-fit: contain;
+  }
+}
+
+.separator {
+  transform: translateY(-30%);
+  transform: translateX(5%);
+  margin: 0 5px;
+  margin-bottom: 5px;
+}
+
+.link {
+  list-style-type: none;
+
+  a {
+    text-decoration: none;
+    padding: 8px 16px;
+    color: #000000;
+
+    &:hover .Print {
+      transform: rotate(-8deg) scale(1.05);
+    }
+
+    &:hover .FAQ,
+    &:hover .Contact {
+      transform: rotate(-10deg) scale(1.05);
+    }
+  }
+
+  .Print {
+    transform: rotate(-8deg);
+    transition: transform 0.3s ease;
+  }
+
+  .FAQ,
+  .Contact {
+    transform: rotate(-10deg);
+    transition: transform 0.3s ease;
+  }
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 80px;
+  right: -100vw;
+  width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+  background-color: var(--backgroundColor);
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  z-index: 10000;
+}
+
+.open {
+  right: 0;
+}
+
+.hambugerMenuWrapper {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 80px;
+  }
+
+  .navLeft {
+    img {
+      width: auto;
+      height: 50px;
+    }
+  }
+
+  .logo {
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+
+  .navRight {
+    display: none;
+  }
+
+  .hambugerMenuWrapper {
+    display: flex;
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+
+  .mobileNavLinks {
+    margin-top: 20px;
+  }
+
+  .link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .socials {
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 50px;
+    padding-bottom: 125px;
+  }
+}

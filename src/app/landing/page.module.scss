@@ -1,0 +1,479 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+
+  p {
+    font-family: 'Diogenes', sans-serif;
+  }
+}
+
+.topText {
+  font-size: 54px;
+  font-weight: normal;
+  width: 90%;
+  margin-left: 70px;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  min-height: 0vw;
+  align-self: start;
+  justify-self: start;
+  margin-left: 8%;
+  margin-top: 5%;
+  position: relative;
+}
+
+.teamSection {
+  display: flex;
+  height: 80vh;
+  width: 100%;
+}
+
+.teamBtnContainer {
+  width: 60%;
+  margin-top: 50px;
+}
+
+.tapeBtn {
+  border: none;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  object-fit: contain;
+  object-position: center center;
+  width: 100%;
+
+  p {
+    font-size: 40px;
+    text-decoration: none;
+    position: absolute;
+    color: black;
+    top: 30%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    transform: rotate(-5deg);
+    font-weight: bold;
+  }
+}
+
+.ourTeamBtn {
+  transform: rotate(-5deg);
+  object-fit: contain;
+  object-position: center center;
+  width: 100%;
+}
+
+.teamBtnText {
+  font-size: calc(10px + 1vw);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-5deg);
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.teamLeft,
+.teamRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.teamRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.ottoWrapper,
+.threeStarsWrapper {
+  flex: 1;
+}
+
+.ottoWrapper {
+  flex: 0.5;
+  width: 25%;
+}
+
+.clientsHeader {
+  text-align: center;
+  font-size: 72px;
+  padding-bottom: 50px;
+}
+
+.imageGrid {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 50%;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.lineLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -20px;
+  position: relative;
+  top: -470px;
+  transform: rotate(20deg);
+  transform-origin: top left;
+}
+
+.lineRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 100px;
+  margin-top: -20px;
+  position: relative;
+  top: -280px;
+  transform: rotate(-10deg);
+  transform-origin: top right;
+}
+
+.lineLeft2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  margin-top: -20px;
+  position: relative;
+  top: -230px;
+  transform: rotate(7deg);
+  transform-origin: top left;
+}
+
+.lineRight2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 100px;
+  position: relative;
+  top: -500px;
+  transform: rotate(-10deg);
+  transform-origin: top right;
+}
+
+.lineLeft3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 100px;
+  margin-top: -20px;
+  position: relative;
+  top: -400px;
+  transform: rotate(7deg);
+  transform-origin: top left;
+}
+
+.threeStarsWrapper {
+  margin-top: 500px;
+}
+
+.socialLinks {
+  text-align: center;
+}
+
+.infoTxt {
+  text-align: center;
+  font-size: 72px;
+  padding: 80px 0;
+}
+
+.sectionOne,
+.sectionTwo,
+.sectionThree {
+  height: 80vh;
+  width: 100vw;
+}
+
+.pricing,
+.preProd,
+.delivery {
+  width: 30vw;
+  margin-left: 10vw;
+
+  h3 {
+    font-weight: bold;
+    font-size: 48px;
+  }
+
+  p {
+    font-size: 34px;
+  }
+}
+
+.printReady,
+.prod,
+.happyClients {
+  width: 30vw;
+  float: right;
+  margin-right: 10vw;
+
+  h3 {
+    font-weight: bold;
+    font-size: 48px;
+  }
+
+  p {
+    font-size: 34px;
+  }
+}
+
+.printReady,
+.preProd,
+.prod {
+  position: relative;
+  top: -150px;
+}
+
+.delivery {
+  position: relative;
+  top: -350px;
+}
+
+.happyClients {
+  position: relative;
+  top: -300px;
+}
+
+.checkout {
+  display: block;
+  font-weight: bolder;
+  font-size: 48px;
+  width: 50%;
+  margin: auto;
+  margin-top: 150px;
+}
+
+.socials {
+  display: block;
+  font-weight: normal;
+  font-size: 48px;
+  width: 50%;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.socials a:first-child {
+  margin-right: 30px;
+}
+
+.fadeIn {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  &.active {
+    opacity: 1;
+  }
+}
+
+.slideFromRight {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  &.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    width: 90%;
+    margin: auto;
+  }
+
+  .teamSection {
+    height: 40vh;
+  }
+
+  .topText {
+    font-size: 18px;
+    margin-top: 0px;
+  }
+
+  .ottoWrapper,
+  .threeStarsWrapper {
+    flex: 1;
+  }
+
+  .threeStarsWrapper {
+    margin-top: 200px;
+  }
+
+  .tapeBtn {
+    object-fit: contain;
+    width: 100%;
+
+    p {
+      font-size: 10px;
+      top: 30%;
+      left: 25%;
+    }
+  }
+
+  .teamBtnContainer {
+    width: 80%;
+  }
+
+  .clientsHeader {
+    font-size: 30px;
+  }
+
+  .infoTxt {
+    font-size: 30px;
+    padding: 40px;
+  }
+
+  .sectionOne {
+    height: 60vh;
+  }
+
+  .sectionTwo,
+  .sectionThree {
+    height: 40vh;
+  }
+
+  .pricing h3,
+  .printReady h3,
+  .preProd h3,
+  .prod h3,
+  .delivery h3,
+  .happyClients h3 {
+    font-size: 12px;
+  }
+
+  .pricing p,
+  .printReady p,
+  .preProd p,
+  .prod p,
+  .delivery p,
+  .happyClients p {
+    font-size: 12px;
+  }
+
+  .checkout {
+    margin-top: 50px;
+    h4 {
+      font-size: 20px;
+    }
+  }
+
+  .sectionOne,
+  .sectionTwo,
+  .sectionThree {
+    height: 30vh;
+  }
+
+  .lineLeft,
+  .lineLeft2,
+  .lineLeft3,
+  .lineRight,
+  .lineRight2 {
+    display: none;
+  }
+
+  // .lineLeft {
+  //   margin-top: -20px;
+  //   margin-left: 30px;
+  //   top: -180px;
+  //   transform: rotate(30deg);
+  //   img {
+  //     width: 30vw;
+  //     height: 0.2rem;
+  //   }
+  // }
+
+  // .lineRight {
+  //   top: -180px;
+  //   transform: rotate(-20deg);
+  //   margin-left: 70px;
+  //   img {
+  //     width: 20vw;
+  //     height: 0.2rem;
+  //   }
+  // }
+
+  // .lineLeft2 {
+  //   margin-right: 10px;
+  //   margin-top: -20px;
+  //   top: -160px;
+  //   transform: rotate(5deg);
+  //   img {
+  //     width: 18vw;
+  //     height: 0.2rem;
+  //   }
+  // }
+
+  // .lineRight2 {
+  //   margin-left: 80px;
+  //   top: -220px;
+  //   transform: rotate(-15deg);
+  //   img {
+  //     width: 20vw;
+  //     height: 0.2rem;
+  //   }
+  // }
+
+  // .lineLeft3 {
+  //   margin-left: 90px;
+  //   margin-top: -20px;
+  //   top: -200px;
+  //   transform: rotate(5deg);
+  //   img {
+  //     width: 20vw;
+  //     height: 0.2rem;
+  //   }
+  // }
+
+  .pricing {
+    top: 0;
+  }
+
+  .printReady {
+    top: 0;
+  }
+
+  .preProd {
+    top: 0;
+  }
+
+  .prod {
+    top: 0;
+  }
+
+  .delivery {
+    top: 0;
+  }
+
+  .happyClients {
+    top: 0;
+  }
+}

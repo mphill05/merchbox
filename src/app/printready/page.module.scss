@@ -1,0 +1,383 @@
+.main {
+  display: flex;
+  min-height: 100vh;
+  padding: 100px 0;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+
+  h3 {
+    font-size: 38px;
+  }
+
+  p {
+    font-family: 'Diogenes', sans-serif;
+    text-align: left;
+    font-size: 20px;
+  }
+}
+
+.printPage,
+.criteria {
+  padding-bottom: 1rem;
+  text-align: center;
+  width: 45vw;
+}
+
+.topHeader {
+  p {
+    padding-top: 30px;
+  }
+}
+
+.fileFormats {
+  p {
+    padding-top: 3rem;
+    text-align: center !important;
+    margin: auto;
+  }
+}
+
+.formats {
+  margin: 25px 0 50px 0;
+}
+
+.criteriaOne {
+  margin-bottom: 30px;
+}
+
+.criteriaTwo {
+  margin-bottom: 30px;
+}
+
+.merchBoxDPI {
+  p {
+    display: inline-block;
+    text-align: center;
+    width: 40%;
+    margin: auto;
+    padding-bottom: 100px;
+  }
+}
+
+.coloring {
+  p {
+    padding-bottom: 50px;
+  }
+}
+
+.pantoneText {
+  p {
+    font-size: 18px;
+    display: inline-block;
+    text-align: center;
+    width: 45%;
+    margin: -50px auto;
+    padding-bottom: 100px;
+  }
+}
+
+.colorMode {
+  padding-bottom: 50px;
+  p {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+}
+
+.mobileBreak {
+  display: none;
+}
+
+.cmykImgWrapper {
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tshirtWrapper {
+  position: relative;
+  width: 50vw;
+  height: 285px;
+  margin: auto;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+
+.printDimImgText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+}
+
+.printDimImgText p:first-child {
+  margin-right: auto;
+  text-align: left;
+  width: 25%;
+}
+
+.printDimImgText p:last-child {
+  margin-left: auto;
+  text-align: right;
+  width: 25%;
+}
+
+.redLine {
+  position: absolute;
+  top: 130px;
+  margin-right: 250px;
+  transform: rotate(-30deg);
+}
+
+.redLine2 {
+  position: absolute;
+  top: 120px;
+  margin-left: 320px;
+  transform: rotate(40deg);
+}
+
+.proTip {
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+.spVdtg p {
+  padding: 50px 0;
+}
+
+.checkList p {
+  padding-top: 50px;
+}
+
+.thanks {
+  p {
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+
+    h3 {
+      font-size: 13px;
+    }
+  }
+
+  .printPage {
+    width: 90vw;
+    margin: auto;
+  }
+
+  .topHeader {
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .formats {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding-bottom: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 60vw;
+      height: auto;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .criteria {
+    width: 90vw;
+    margin: auto;
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .merchBoxLqImgWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80vw;
+      height: auto;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+  }
+
+  .merchBoxDPI {
+    text-align: center;
+
+    p {
+      padding-bottom: 25px;
+    }
+  }
+
+  .coloring {
+    width: 90vw;
+    margin: auto;
+    p {
+      font-size: 15px;
+      padding-bottom: 50px;
+    }
+  }
+
+  .pantoneText {
+    p {
+      font-size: 14px;
+      padding-bottom: 70px;
+      margin: -20px auto;
+    }
+  }
+
+  .pantone img {
+    width: 70vw;
+    height: auto;
+  }
+
+  .colorMode img {
+    width: 80vw;
+    height: auto;
+  }
+
+  .colorMode {
+    p {
+      font-size: 14px;
+      padding-bottom: 25px;
+    }
+  }
+
+  .mobileBreak {
+    display: inline;
+  }
+
+  .printDimensions {
+    width: 90vw;
+    margin: auto;
+
+    p {
+      font-size: 14px;
+      padding-bottom: 50px;
+    }
+  }
+
+  .tshirtWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+
+    img {
+      width: 50vw;
+      height: auto;
+      margin: auto;
+    }
+  }
+
+  .redLine {
+    top: 70px;
+    margin-right: 130px;
+    transform: rotate(-30deg);
+
+    img {
+      width: 30vw;
+    }
+  }
+
+  .redLine2 {
+    top: 90px;
+    margin-left: 220px;
+    transform: rotate(40deg);
+
+    img {
+      width: 20vw;
+    }
+  }
+
+  .spVdtgWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80vw;
+      height: auto;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+  }
+
+  .spVdtg p {
+    font-size: 14px;
+    padding: 25px 0;
+    width: 90%;
+    margin: auto;
+  }
+
+  .checkList img {
+    width: 60vw;
+    height: auto;
+  }
+
+  .checkList p {
+    font-size: 14px;
+    padding-top: 25px;
+  }
+
+  .thanks {
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .thanks img {
+    width: 15vw;
+    height: auto;
+  }
+}

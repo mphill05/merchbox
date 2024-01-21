@@ -1,0 +1,39 @@
+.FaqMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+
+  h2 {
+    padding-bottom: 5rem;
+    letter-spacing: -0.07em;
+    font-size: 50px;
+    font-family: 'Diogenes', sans-serif;
+  }
+}
+
+.accordian {
+  width: 60vw;
+}
+
+@media (max-width: 768px) {
+  .FaqMain {
+    width: 100vw;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+
+    h3 {
+      font-size: 16px;
+      padding: 1rem 0 2rem 0;
+      width: 90vw;
+      margin: auto;
+      text-align: center;
+    }
+  }
+  .accordian {
+    width: 80vw;
+    font-size: 12px;
+  }
+}

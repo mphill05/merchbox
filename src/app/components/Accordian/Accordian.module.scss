@@ -1,0 +1,36 @@
+.accordian {
+  border-bottom: 7px solid #000;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 1.2em;
+
+  span {
+    width: 90%;
+  }
+
+  button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+  }
+}
+
+.content {
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.2em;
+  font-family: 'Diogenes', sans-serif;
+}
+
+.accordianBtn {
+  color: black;
+  cursor: pointer;
+}

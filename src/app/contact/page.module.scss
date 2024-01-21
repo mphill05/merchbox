@@ -1,0 +1,350 @@
+.contactPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-bottom: 10rem;
+}
+
+.formHeader {
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Diogenes', sans-serif;
+}
+
+.contactForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid black;
+  padding: 2em;
+}
+
+.form {
+  width: 40vw;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .form-group {
+    flex: 1;
+    min-width: 45%;
+    padding: 0.5em;
+
+    label,
+    input,
+    select,
+    textarea {
+      width: 100%;
+    }
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+  }
+
+  input[type='text'],
+  input[type='email'],
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 4px solid black;
+    height: 60px;
+    font-family: 'Diogenes', sans-serif;
+    font-style: italic;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: lightgray;
+    font-size: 16px;
+    font-family: 'Diogenes', sans-serif;
+    font-style: italic;
+  }
+
+  input[type='text']:hover,
+  input[type='email']:hover,
+  textarea:hover {
+    color: black;
+  }
+
+  input[type='text']:hover::placeholder,
+  input[type='email']:hover::placeholder,
+  textarea:hover::placeholder {
+    color: black;
+  }
+
+  select {
+    padding: 0.5em 1em;
+    width: 100%;
+
+    &:hover {
+      color: black;
+      cursor: pointer;
+    }
+  }
+
+  .selectWrapper {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+
+    .selectedValue {
+      position: relative;
+      border: 4px solid black;
+      padding: 12px;
+      background-color: #fff;
+      color: lightgray;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 60px;
+      line-height: 25px;
+      font-family: 'Diogenes', sans-serif;
+      font-style: italic;
+
+      &:hover {
+        color: #000;
+      }
+
+      .caret {
+        float: right;
+        color: #000;
+      }
+    }
+
+    &.optionSelected .selectedValue {
+      color: #000 !important;
+    }
+
+    .options {
+      position: absolute;
+      width: 100%;
+      border: 3px solid black;
+      background: white;
+      z-index: 1;
+
+      .option {
+        padding: 6px;
+        color: black;
+        width: 100%;
+        font-family: 'Diogenes', sans-serif;
+        font-style: italic;
+
+        &:hover {
+          color: lightgray;
+        }
+      }
+    }
+  }
+
+  .defaultOption {
+    color: lightgray;
+  }
+
+  textarea {
+    height: 4em;
+  }
+
+  input[type='file'] {
+    border: none;
+    color: lightgray;
+  }
+
+  p {
+    font-size: 0.8rem;
+    color: #666;
+  }
+
+  button {
+    display: block;
+    background-color: #333;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    border-radius: 0;
+    background-color: #000;
+    margin: auto;
+    font-family: 'Diogenes', sans-serif;
+    font-size: 30px;
+    transition: transform 0.3s ease;
+  }
+}
+
+.nameEmailContainer,
+.companyAndQuantitiesContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  div {
+    width: 48%;
+  }
+}
+
+.companyAndQuantitiesContainer {
+  padding-top: 15px;
+}
+
+.projectContainer,
+.mockUpContainer {
+  width: 100%;
+  margin-top: 1em;
+}
+
+.projectContainer {
+  textarea {
+    height: 80px;
+
+    &:hover {
+      color: black;
+      cursor: pointer;
+    }
+  }
+}
+
+.mockUpContainer {
+  width: 70vw;
+  margin: auto;
+}
+
+.customMockUpBtn {
+  display: inline-block;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 4px solid black;
+  color: lightgray !important;
+  background-color: #fff;
+  cursor: pointer;
+  padding: 15px 60px;
+  font-family: 'Diogenes', sans-serif;
+  font-style: italic;
+
+  &:hover {
+    color: #000 !important;
+  }
+}
+
+.mockUpBtn {
+  display: none;
+}
+
+.mockUpUnderText {
+  padding-top: 5px;
+}
+
+.uploadedFileText {
+  font-family: 'Diogenes', sans-serif;
+  cursor: pointer;
+}
+
+.bottomForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.submitBtnContainer {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+
+  button {
+    margin-top: 20px;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.disabledSubmitBtn {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  font-size: 18px !important;
+}
+
+@media (max-width: 768px) {
+  .contactPage {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .formHeader {
+    padding-top: 0;
+  }
+
+  .contactForm {
+    padding: 1em;
+  }
+
+  .form {
+    width: 100%;
+
+    p {
+      font-size: 0.7rem;
+    }
+
+    .form-group {
+      min-width: 100%;
+    }
+
+    label {
+      font-size: 0.5em;
+    }
+
+    .selectedValue {
+      font-size: 0.7rem;
+    }
+
+    .caret {
+      line-height: 30px;
+      text-align: center;
+    }
+
+    input::placeholder {
+      font-size: 0.7rem;
+    }
+
+    textarea::placeholder {
+      font-size: 0.7rem;
+    }
+  }
+
+  .formHeader {
+    font-size: 2rem;
+  }
+
+  .mockUpContainer {
+    width: 100%;
+  }
+
+  .customMockUpBtn {
+    padding: 15px 30px;
+  }
+
+  .uploadedFileText {
+    font-size: 14px;
+  }
+}
