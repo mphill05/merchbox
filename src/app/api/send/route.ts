@@ -9,7 +9,7 @@ const corsMiddleware = cors({
   methods: ['GET', 'POST'], // Specify the allowed HTTP methods
 });
 
-export async function handler(req: NextApiRequest, res: NextApiResponse) {
+export async function POST(req: any, res: any) {
   console.log(process.env.RESEND_API_KEY);
   console.log('API route hit');
 
